@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Using Django</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./static/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background: linear-gradient(145deg, #00ffcc, #00b3b3);
+            border: none;
+            color: #fff;
+            padding: 18px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 255, 204, 0.3);
+            transition: all 0.3s ease-in-out;
+            outline: none;
+            position: relative;
+        }
+
+        .btn:hover {
+            background: linear-gradient(145deg, #ff007f, #e6007d);
+            box-shadow: 0 6px 15px rgba(255, 0, 204, 0.4);
+            transform: translateY(-4px);
+        }
+        .btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(255, 0, 204, 0.3);
+        }
+        .btn:focus {
+            outline: none;
+            border: 2px solid #ff007f;
+        }
+
+        @media (max-width: 600px) {
+            .btn {
+                padding: 15px 28px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .btn {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn" id="registerBtn"><a href="/register" style="text-decoration: none; color: white;">Register</a></button>
+        <button class="btn" id="loginBtn"><a href="/verify" style="text-decoration: none; color: white;">Login</a></button>
+    </div>
+</body>
+</html>
